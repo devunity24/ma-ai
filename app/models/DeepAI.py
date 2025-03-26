@@ -10,7 +10,7 @@ from langchain.chat_models import ChatOpenAI
 
 class DeepAI:
 
-    __openai_key = ''
+    __openai_k = ''
 
     @staticmethod
     def generateWithMultiplePrompt(systemPrompt: Prompt, userPrompt: Prompt, assistantPrompt: Prompt = Prompt(), childId: str = 'master', actionMsg: str = '',
@@ -32,8 +32,8 @@ class DeepAI:
             Logger.info(
                 f'Prompt to {actionMsg} : "{userPrompt.get_prompt()}" by {llm}', childId)
             
-        model = ChatOpenAI(temperature=0, model_name='gpt-4o', openai_api_key=DeepAI.__openai_key);
+        model = ChatOpenAI(temperature=0, model_name='gpt-4o', openai_api_key=DeepAI.__openai_k);
 
-        llm_instance = OpenAI(DeepAI.__openai_key, model=model, temperature=temperature, max_tokens=max_tokens, top_p=0.9, frequency_penalty=0, presence_penalty=2, stop=[])
+        llm_instance = OpenAI(DeepAI.__openai_k, model=model, temperature=temperature, max_tokens=max_tokens, top_p=0.9, frequency_penalty=0, presence_penalty=2, stop=[])
         return llm_instance.generateWithMultiplePrompt(systemPrompt=systemPrompt, userPrompt=userPrompt, assistantPrompt=assistantPrompt)
 
