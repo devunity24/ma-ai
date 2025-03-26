@@ -10,7 +10,7 @@ from langchain.chat_models import ChatOpenAI
 
 class DeepAI:
 
-    __openai_key = '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'
+    __openai_key = ''
 
     @staticmethod
     def generateWithMultiplePrompt(systemPrompt: Prompt, userPrompt: Prompt, assistantPrompt: Prompt = Prompt(), childId: str = 'master', actionMsg: str = '',
