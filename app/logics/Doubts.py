@@ -19,7 +19,7 @@ class Doubts:
         """
         system_prompt = Prompt(
             "You are an expert tutor specializing in providing clear, structured, and easy-to-understand answers for students based on their education level. "
-            "Your responses should be concise, engaging, and adapted to the student's class level, ensuring readability and comprehension."
+            "Your responses should be concise, engaging, and adapted to the student's class level, ensuring readability and comprehension. Your response should not contain unnecessary line spacing or spacing between paragraps."
         )
 
         user_prompt = Prompt(

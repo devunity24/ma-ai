@@ -9,7 +9,7 @@ router = APIRouter()
 
 doubts = Doubts()
 
-@router.get("/resolve-doubt")
+@router.post("/resolve-doubt")
 async def resolve_doubt(request: Request, childId: str= 'master'):
     
     request_body = await request.json()
